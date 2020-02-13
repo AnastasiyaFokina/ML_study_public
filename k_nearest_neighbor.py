@@ -77,7 +77,7 @@ class KNearestNeighbor:
                 # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
                 # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-        return dists
+       return dists
 
     def compute_distances_one_loop(self, X):
         """
