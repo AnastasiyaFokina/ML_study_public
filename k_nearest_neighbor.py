@@ -99,7 +99,7 @@ class KNearestNeighbor:
             # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
             dists[i, :] =  np.sqrt(np.sum((X[i, :] - self.X_train)**2, axis = 1))
             # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-        return dists
+         return dists
 
     def compute_distances_no_loops(self, X):
         """
