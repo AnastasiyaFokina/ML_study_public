@@ -33,7 +33,7 @@ class LossAndDerivatives:
         """
 
         # YOUR CODE HERE    
-        return 
+        return np.mean.abs(X.dot(w) - Y)
 
     @staticmethod
     def l2_reg(w):
@@ -46,8 +46,8 @@ class LossAndDerivatives:
         Computes the L2 regularization term for the weight matrix w.
         """
         
-        # YOUR CODE HERE
-        return 
+        int lambda2 = 1
+        return lambda2 * np.linalg.norm(w, ord = 2)
 
     @staticmethod
     def l1_reg(w):
@@ -60,8 +60,8 @@ class LossAndDerivatives:
         Computes the L1 regularization term for the weight matrix w.
         """
 
-        # YOUR CODE HERE
-        return 
+        int lambda1 = 1
+        return lambda1 * np.linalg.norm(w, ord = 1)
 
     @staticmethod
     def no_reg(w):
@@ -82,7 +82,7 @@ class LossAndDerivatives:
         Computes the MSE derivative for linear regression (X.dot(w)) with no bias term
         w.r.t. w weight matrix.
         """
-
+        
         # YOUR CODE HERE
         return 
 
