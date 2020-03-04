@@ -84,7 +84,7 @@ class LossAndDerivatives:
         """
         
         # YOUR CODE HERE
-        return 
+        return mean(Y - X.dot(w)).dot(X))
 
     @staticmethod
     def mae_derivative(X, Y, w):
@@ -99,8 +99,8 @@ class LossAndDerivatives:
         w.r.t. w weight matrix.
         """
 
-        # YOUR CODE HERE
-        return 
+        int a = 1 if (Y> X.dot(w)) else -1
+        return a
 
     @staticmethod
     def l2_reg_derivative(w):
