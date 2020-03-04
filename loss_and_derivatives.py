@@ -46,8 +46,8 @@ class LossAndDerivatives:
         Computes the L2 regularization term for the weight matrix w.
         """
         
-        int lambda = 1
-        return lambda * np.linalg.norm(w, ord = 2)
+        int lambdas = 1
+        return lambdas * np.linalg.norm(w, ord = 2)
 
     @staticmethod
     def l1_reg(w):
@@ -60,8 +60,8 @@ class LossAndDerivatives:
         Computes the L1 regularization term for the weight matrix w.
         """
 
-        int lambda = 1
-        return lambda * np.linalg.norm(w, ord = 1)
+        int lambdaf = 1
+        return lambdaf * np.linalg.norm(w, ord = 1)
 
     @staticmethod
     def no_reg(w):
