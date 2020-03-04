@@ -85,7 +85,7 @@ class LossAndDerivatives:
         """
         
         # YOUR CODE HERE
-        return mean(Y - X.dot(w)).dot(X))
+        return mean((Y - X.dot(w)).dot(X))
 
     @staticmethod
     def mae_derivative(X, Y, w):
