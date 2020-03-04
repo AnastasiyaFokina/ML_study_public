@@ -46,7 +46,8 @@ class LossAndDerivatives:
         Computes the L2 regularization term for the weight matrix w.
         """
         
-        int lambdas = 1
+       
+        lambdas= 1
         return lambdas * np.linalg.norm(w, ord = 2)
 
     @staticmethod
@@ -60,7 +61,7 @@ class LossAndDerivatives:
         Computes the L1 regularization term for the weight matrix w.
         """
 
-        int lambdaf = 1
+        lambdaf = 1
         return lambdaf * np.linalg.norm(w, ord = 1)
 
     @staticmethod
@@ -99,7 +100,7 @@ class LossAndDerivatives:
         w.r.t. w weight matrix.
         """
 
-        int a = 1 if (Y> X.dot(w)) else -1
+        a = 1 if (Y> X.dot(w)) else -1
         return a
 
     @staticmethod
