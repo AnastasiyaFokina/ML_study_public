@@ -85,7 +85,7 @@ class LossAndDerivatives:
         """
         
         # YOUR CODE HERE
-        return np.mean((Y - X.dot(w)).dot(X))
+        return np.mean((Y - X.dot(w)).dot(X))/X.shape[0] / 2
 
     @staticmethod
     def mae_derivative(X, Y, w):
