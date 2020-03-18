@@ -100,7 +100,7 @@ class LossAndDerivatives:
         w.r.t. w weight matrix.
         """
 
-        a = 1 if (Y> X.dot(w)) else -1
+        a = a.all() if (Y> X.dot(w)) else -1
         return a
 
     @staticmethod
