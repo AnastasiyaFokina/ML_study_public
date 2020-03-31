@@ -39,7 +39,7 @@ class SVM(BaseEstimator, ClassifierMixin):
             kernel function values for all pairs of samples from x_1 and x_2
             torch.tensor shaped `(#samples_1, #samples_2)` of type torch.float32
         '''
-        return torch.Tensor(x_1.T.dot(x_2))
+        return torch.Tensor(x_1.T.dot(x_2)).type(torch.float32)
     
     def __init__(
         self,
