@@ -82,7 +82,7 @@ class SVM(BaseEstimator, ClassifierMixin):
                 
                 optimizer.zero_grad()     # Manually zero the gradient buffers of the optimizer
                 
-                preds = ### YOUR CODE HERE # get the matrix product using SVM parameters: self.betas and self.bias
+                preds = rbf(x_batch,self.bias)*self.betas ### YOUR CODE HERE # get the matrix product using SVM parameters: self.betas and self.bias
                 preds = preds.flatten()
                 loss = self.lmbd * self.betas[batch_inds].T @ k_batch @ self.betas + hinge_loss(preds, y_batch)
                 loss.backward()           # Backpropagation
