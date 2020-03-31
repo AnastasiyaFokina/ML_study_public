@@ -16,7 +16,7 @@ def rbf(x_1, x_2, sigma=1.):
         kernel function values for all pairs of samples from x_1 and x_2
         torch.tensor of type torch.float32 shaped `(#samples_1, #samples_2)`
     '''
-    distances = exp(-(np.linalg.norm(x_1-x_2)**2)/2/sigma**2)
+    distances = np.exp(-(np.linalg.norm(x_1-x_2)**2)/2/sigma**2)
     return torch.Tensor(distances).type(torch.float32)
 
 def hinge_loss(scores, labels):
