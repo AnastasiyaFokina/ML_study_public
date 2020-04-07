@@ -18,9 +18,14 @@ def entropy(y):
     """
     EPS = 0.0005
 
-    # YOUR CODE HERE
-    
-    return 0.
+    n_insctances = len(y[0])
+    H = 0
+    for classes in itertools.product(*[set(x) for x in y]):
+        v = reduce(np.logical_and, (predictions, c for predictions, c in zip(y, classes)))
+        p = np.mean(v)
+        H += -p * np.log2(p) if p > 0 else 0
+    return H
+  
     
 def gini(y):
     """
@@ -37,9 +42,13 @@ def gini(y):
         Gini impurity of the provided subset
     """
 
-    # YOUR CODE HERE
-    
-    return 0.
+    n_insctances = len(y[0])
+    H = 0
+    for classes in itertools.product(*[set(x) for x in y]):
+        v = reduce(np.logical_and, (predictions, c for predictions, c in zip(y, classes)))
+        p = np.mean(v)
+        H += 1-p **2 if p > 0 else 0
+    return H
     
 def variance(y):
     """
